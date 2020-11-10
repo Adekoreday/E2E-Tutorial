@@ -1,0 +1,8 @@
+1599947290379	geckodriver	INFO	Listening on 127.0.0.1:4444
+1599947290695	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cn/8859470x7tvd677lgh3zdm080000gp/T/rust_mozprofileD9tUrC"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599947292981	Marionette	INFO	Listening on port 62731
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 689))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+1599947323272	Marionette	INFO	Stopped listening on port 62731
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
