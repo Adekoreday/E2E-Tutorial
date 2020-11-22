@@ -1,23 +1,33 @@
-21:19:43.139 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-21:19:43.250 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
-2020-11-10 21:19:43.333:INFO::main: Logging initialized @661ms to org.seleniumhq.jetty9.util.log.StdErrLog
-21:19:43.839 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-21:19:44.035 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
-21:19:44.403 INFO [ActiveSessionFactory.apply] - Capabilities are: {
-  "acceptSslCerts": true,
+10:55:08.965 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+10:55:09.118 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2020-11-22 10:55:09.292:INFO::main: Logging initialized @770ms to org.seleniumhq.jetty9.util.log.StdErrLog
+10:55:09.848 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+10:55:10.059 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+10:55:10.626 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "browserName": "firefox",
+  "name": "Index"
+}
+10:55:10.628 INFO [ActiveSessionFactory.apply] - Capabilities are: {
   "browserName": "chrome",
   "chromeOptions": {
     "w3c": false
   },
-  "javascriptEnabled": true,
   "name": "Index"
 }
-21:19:44.405 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
-Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 30027
+10:55:10.629 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+10:55:10.629 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+1606038910675	geckodriver	INFO	Listening on 127.0.0.1:19879
+Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 11881
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1605039587.019][WARNING]: This version of ChromeDriver has not been tested with Chrome version 86.
-21:19:47.159 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
-21:19:47.942 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 8302013881d896a6032fcf89450a932e (org.openqa.selenium.chrome.ChromeDriverService)
-21:19:53.172 INFO [ActiveSessions$1.onStop] - Removing session 8302013881d896a6032fcf89450a932e (org.openqa.selenium.chrome.ChromeDriverService)
+1606038911068	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cn/8859470x7tvd677lgh3zdm080000gp/T/rust_mozprofilejWe8WD"
+10:55:13.762 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+10:55:14.717 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 247195b1691e52415490b3140f802e4f (org.openqa.selenium.chrome.ChromeDriverService)
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606038917589	Marionette	INFO	Listening on port 64278
+10:55:17.721 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+10:55:17.736 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session be3d52f1-25c4-704d-8b2b-501a494840e1 (org.openqa.selenium.firefox.GeckoDriverService)
+1606038921953	Marionette	INFO	Stopped listening on port 64278
+10:55:22.449 INFO [ActiveSessions$1.onStop] - Removing session 247195b1691e52415490b3140f802e4f (org.openqa.selenium.chrome.ChromeDriverService)
+10:55:22.719 INFO [ActiveSessions$1.onStop] - Removing session be3d52f1-25c4-704d-8b2b-501a494840e1 (org.openqa.selenium.firefox.GeckoDriverService)
