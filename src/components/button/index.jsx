@@ -8,7 +8,7 @@ const Button = ({ handleClick, userId, planId, children }) => {
         handleClick({userId, planId});
     }
     return (
-        <button className="button" onClick={() => Subscribe(userId, planId)}>
+        <button id={`subscribe${planId}`} className="button" onClick={() => Subscribe(userId, planId)}>
             {children}
         </button>
     );

@@ -8,7 +8,7 @@ const generateAlert = (type) => {
       alert = (
         <Alert status="success">
           <AlertIcon />
-          Data uploaded to the server. Fire on!
+          Subscription successful. Fire on!
         </Alert>
       );
       break;
@@ -16,9 +16,10 @@ const generateAlert = (type) => {
       alert = (
         <Alert status="error">
           <AlertIcon />
-          Seems your account is about to expire, upgrade now!
+          Unable to make a subscription at the moment, try again!
         </Alert>
       );
+      break;
       case "loading":
         alert = (
           <Alert status="info">

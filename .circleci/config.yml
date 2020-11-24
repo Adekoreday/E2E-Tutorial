@@ -1,32 +1,21 @@
-version: 2
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.1.1
 jobs:
   build:
     docker:
-      - image: node:12.16.2
-      - image: selenium/standalone-chrome:3.1.0
+      - image: 'cimg/node:15.0.1-browsers'
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
     working_directory: ~/repo
 
     steps:
       - checkout
+      - browser-tools/install-browser-tools
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: yarn install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm install
 
       # run tests!
-      - run: apt-get update
-      - run: apt-get install sudo
-      - run: sudo apt-get install -y openjdk-8-jdk
-      - run: java -version
-      - run: yarn test
-      - run: yarn e2e-test
+      - run: npm test
+      - run: npm run e2e-test

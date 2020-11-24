@@ -6,8 +6,8 @@ module.exports = {
         selenium_host: "localhost",
         silent: true,
         screenshots: {
-          enabled: false,
-          path: "",
+          enabled: true,
+          path: "tests_output",
         },
         globals: {
           abortOnAssertionFailure: false,

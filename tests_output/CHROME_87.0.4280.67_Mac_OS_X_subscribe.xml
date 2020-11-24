@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="subscribe"
+    errors="0" failures="0" hostname="" id="" package="subscribe" skipped="0"
+    tests="1" time="4.158" timestamp="">
+  
+    <testcase name="SUBSCRIBE_USER" classname="subscribe" time="4.158" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

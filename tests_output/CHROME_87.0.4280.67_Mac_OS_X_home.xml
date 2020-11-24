@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="home"
+    errors="0" failures="0" hostname="" id="" package="home" skipped="0"
+    tests="1" time="8.686" timestamp="">
+  
+    <testcase name="PAGE_LOADS" classname="home" time="8.686" assertions="1">
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
