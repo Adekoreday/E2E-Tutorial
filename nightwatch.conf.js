@@ -2,22 +2,12 @@ module.exports = {
     src_folders: ['e2e'],
     test_settings: {
       default: {
-        launch_url: "http://google.com",
         selenium_port: 4444,
         selenium_host: "localhost",
         silent: true,
         screenshots: {
           enabled: true,
-          path: "./",
-        },
-        test_workers: {
-          enabled: true,
-          workers: "auto",
-        },
-        desiredCapabilities: {
-          browserName: "chrome",
-          javascriptEnabled: true,
-          acceptSslCerts: true,
+          path: "tests_output",
         },
         globals: {
           abortOnAssertionFailure: false,

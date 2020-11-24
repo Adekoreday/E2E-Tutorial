@@ -1,23 +1,69 @@
-21:19:43.139 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-21:19:43.250 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
-2020-11-10 21:19:43.333:INFO::main: Logging initialized @661ms to org.seleniumhq.jetty9.util.log.StdErrLog
-21:19:43.839 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-21:19:44.035 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
-21:19:44.403 INFO [ActiveSessionFactory.apply] - Capabilities are: {
-  "acceptSslCerts": true,
+09:33:36.631 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+09:33:36.936 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2020-11-24 09:33:37.162:INFO::main: Logging initialized @1293ms to org.seleniumhq.jetty9.util.log.StdErrLog
+09:33:37.668 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+09:33:37.850 ERROR [BaseServer.start] - Port 4444 is busy, please choose a free port and specify it using -port option
+Exception in thread "main" java.lang.RuntimeException: java.net.BindException: Address already in use
+	at org.openqa.selenium.grid.server.BaseServer.start(BaseServer.java:221)
+	at org.openqa.selenium.remote.server.SeleniumServer.boot(SeleniumServer.java:131)
+	at org.openqa.grid.selenium.GridLauncherV3.lambda$buildLaunchers$3(GridLauncherV3.java:249)
+	at org.openqa.grid.selenium.GridLauncherV3.lambda$launch$0(GridLauncherV3.java:86)
+	at java.base/java.util.Optional.map(Optional.java:258)
+	at org.openqa.grid.selenium.GridLauncherV3.launch(GridLauncherV3.java:86)
+	at org.openqa.grid.selenium.GridLauncherV3.main(GridLauncherV3.java:70)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:479)
+	at java.base/sun.nio.ch.Net.bind(Net.java:468)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:220)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:88)
+	at org.seleniumhq.jetty9.server.ServerConnector.openAcceptChannel(ServerConnector.java:339)
+	at org.seleniumhq.jetty9.server.ServerConnector.open(ServerConnector.java:307)
+	at org.seleniumhq.jetty9.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.seleniumhq.jetty9.server.ServerConnector.doStart(ServerConnector.java:235)
+	at org.seleniumhq.jetty9.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.seleniumhq.jetty9.server.Server.doStart(Server.java:395)
+	at org.seleniumhq.jetty9.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.openqa.selenium.grid.server.BaseServer.start(BaseServer.java:202)
+	... 6 more
+eSession] - Detected dialect: W3C
+09:33:45.847 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session a61df01e-3880-b642-9083-c85eb3e3e824 (org.openqa.selenium.firefox.GeckoDriverService)
+1606206832329	Marionette	INFO	Stopped listening on port 54681
+09:33:52.558 INFO [ActiveSessions$1.onStop] - Removing session 082f397d7ac4a1dfc38fce4e0967cbed (org.openqa.selenium.chrome.ChromeDriverService)
+09:33:52.598 INFO [ActiveSessionFactory.apply] - Capabilities are: {
   "browserName": "chrome",
   "chromeOptions": {
     "w3c": false
   },
-  "javascriptEnabled": true,
-  "name": "Index"
+  "name": "Subscribe"
 }
-21:19:44.405 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
-Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 30027
+09:33:52.599 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 42370
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1605039587.019][WARNING]: This version of ChromeDriver has not been tested with Chrome version 86.
-21:19:47.159 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
-21:19:47.942 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 8302013881d896a6032fcf89450a932e (org.openqa.selenium.chrome.ChromeDriverService)
-21:19:53.172 INFO [ActiveSessions$1.onStop] - Removing session 8302013881d896a6032fcf89450a932e (org.openqa.selenium.chrome.ChromeDriverService)
+09:33:53.399 INFO [ActiveSessions$1.onStop] - Removing session a61df01e-3880-b642-9083-c85eb3e3e824 (org.openqa.selenium.firefox.GeckoDriverService)
+09:33:53.425 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "browserName": "firefox",
+  "name": "Subscribe"
+}
+09:33:53.425 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+1606206833477	geckodriver	INFO	Listening on 127.0.0.1:10232
+1606206833557	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cn/8859470x7tvd677lgh3zdm080000gp/T/rust_mozprofileue1AAE"
+09:33:54.440 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+09:33:54.635 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 8489dc0dcd0694864b1211eac842785c (org.openqa.selenium.chrome.ChromeDriverService)
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606206838189	Marionette	INFO	Listening on port 54857
+09:33:58.344 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+09:33:58.354 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 61965df1-ec8e-5344-a450-4eb84d19683e (org.openqa.selenium.firefox.GeckoDriverService)
+09:33:58.910 INFO [ActiveSessions$1.onStop] - Removing session 8489dc0dcd0694864b1211eac842785c (org.openqa.selenium.chrome.ChromeDriverService)
+1606206839764	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:228:19
+TimedPromise@chrome://marionette/content/sync.js:213:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1606206841542	Marionette	INFO	Stopped listening on port 54857
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+09:34:02.036 INFO [ActiveSessions$1.onStop] - Removing session 61965df1-ec8e-5344-a450-4eb84d19683e (org.openqa.selenium.firefox.GeckoDriverService)

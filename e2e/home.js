@@ -1,8 +1,9 @@
 module.exports = {
-    "Basic e2e test": function (browser) {
+    "PAGE_LOADS": function (browser) {
         browser
         .url("http://localhost:3005/")
         .waitForElementVisible("body") 
         .end()
     }
 }
+
